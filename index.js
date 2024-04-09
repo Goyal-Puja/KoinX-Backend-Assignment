@@ -23,9 +23,29 @@ async function updateCrypto() {
   }
 }
 
+async function getCompaniesHoldingCrypto(currency){
+    try{
+       const response = await axios.get(`https://api.coingecko.com/api/v3/companies/public_treasury/${currency}`);
+       return response.data;
+       console.log(response.data);
+    } catch (error) {
+         throw new Error(`Error fetching companies holding ${currency}: ${error.message}`);
+    }
+}
+
 cron.schedule("0 * * * *", () => {
   console.log("Running updateCrypto Job..");
   updateCrypto();
+});
+
+app.get('/companies/:currency', async(req, res) => {
+    const currency = req.params.currency.toLowerCase();
+    try{
+        const companies = await getCompaniesHoldingCrypto(currency);
+        res.json(companies);
+    } catch ( error ){
+        res.status(500).json({ error : error.message});
+    }
 });
 
 app.listen(port, () => {
