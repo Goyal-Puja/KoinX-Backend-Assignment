@@ -31,6 +31,10 @@ Replace <port> with the port number specified in your backend configuration or t
 
 ![Screenshot 2024-04-10 173247](https://github.com/Goyal-Puja/KoinX-Backend-Assignment/assets/47891452/cfd0d046-3de4-4a46-8579-e3d3b32f7f54)
 
+## TASK - 2
+
+![Screenshot 2024-04-10 180724](https://github.com/Goyal-Puja/KoinX-Backend-Assignment/assets/47891452/6cfe7b70-1b7e-44d0-821d-c787241f1f36)
+
 ## Task - 3
 
 ![Screenshot 2024-04-10 173406](https://github.com/Goyal-Puja/KoinX-Backend-Assignment/assets/47891452/2ee1a6e0-d22b-4c26-afd2-d257e541f15a)
